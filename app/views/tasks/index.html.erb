@@ -1,0 +1,25 @@
+<h1>Listing All Todos</h1>
+ 
+<table>
+  <tr>
+    <th>Task Name</th>
+    <th>Description</th>
+  </tr>
+ 
+  <% @task_list.each do |task| %>
+    <tr>
+      <td>
+        <%= link_to task.name, task_path(task) %>
+      </td>
+      <td>
+        <%= task.description %>
+      </td>
+      <td>
+        <%= link_to 'Edit Task', edit_task_path(task) %>
+      </td>
+      <td>
+        <%= link_to 'Destroy', task_path(task), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+</table>

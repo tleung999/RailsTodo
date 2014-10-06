@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <ul>
+    <%= link_to 'Home', controller: 'tasks' %>
+    <%= link_to 'New Task', new_task_path %>
+  </ul>
+<%= yield %>
+
+</body>
+</html>

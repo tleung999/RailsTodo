@@ -1,0 +1,15 @@
+<%= form_for :task, url: task_path(@task), method: :patch do |f| %>
+  <p>
+    <%= f.label :Task_Name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :Task_Description %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
